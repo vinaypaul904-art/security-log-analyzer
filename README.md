@@ -9,3 +9,9 @@ This is a basic Python project that analyzes network logs and detects suspicious
 
 ## Technologies
 - Python
+
+## How to Run
+
+1. Run analyzer.py
+2. Run dashboard.py
+3. Open http://127.0.0.1:5000 in browser
