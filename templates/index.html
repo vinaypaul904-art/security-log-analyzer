@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Security Dashboard</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #141e30, #243b55);
+            margin: 0;
+            padding: 20px;
+            color: white;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .card {
+            background: white;
+            color: black;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .danger {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>🔐 Security Dashboard</h1>
+
+<div class="container">
+
+    <div class="card">
+        <h2>⚠ Suspicious Activity</h2>
+        {% for line in report %}
+            <p class="danger">{{ line }}</p>
+        {% endfor %}
+    </div>
+
+    <div class="card">
+        <h2>🚫 Blocked IPs</h2>
+        {% for ip in blocked_ips %}
+            <p>{{ ip }}</p>
+        {% endfor %}
+    </div>
+
+</div>
+
+</body>
+</html>
